@@ -5,10 +5,12 @@ import { Link } from 'react-router';
 const Navbar = () => {
     return (
         <div className='m-auto max-w-[1440px] max-2xl:px-4 max-sm:px-2 py-5 flex flex-row justify-between items-center '>
-            <div className='flex gap-2 justify-center items-center'>
-                <img className='h-[40px]' src={logo} alt="" />
-                <h1 className='font-bold text-[1rem] bg-gradient-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent'>HERO.IO</h1>
-            </div>
+            <Link to="/">
+                <div className='flex gap-2 justify-center items-center'>
+                    <img className='h-[40px]' src={logo} alt="" />
+                    <h1 className='font-bold text-[1rem] bg-gradient-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent'>HERO.IO</h1>
+                </div>
+            </Link>
             <div>
                 <ul className='flex gap-5'>
                     <Link to='/' className='text-[1rem] text-black font-medium hover:bg-gradient-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text hover:text-transparent cursor-pointer'>Home</Link>

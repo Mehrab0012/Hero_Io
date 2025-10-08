@@ -5,7 +5,7 @@ import { useLoaderData } from 'react-router';
 import TrendingApps from './TrendingApps';
 
 const Home = () => {
-    const { data } = useLoaderData();
+    const data = useLoaderData();
     const HomeProducts = data.slice(0, 8)
 
     return (
