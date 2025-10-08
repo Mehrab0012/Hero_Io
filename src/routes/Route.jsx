@@ -3,9 +3,12 @@ import Layout from "../layouts/Layout";
 import Home from "../pages/Home";
 import Loader from "../components/loader/Loader";
 import Error from "../pages/error/Error";
-import fetchResponse from "../loadData/Loader";
 import Apps from '../pages/Apps'
+import {fetchResponse , productDetails} from '../loadData/Loader'
 import SearchItems from "../pages/searchItems/SearchItems";
+import SingleApp from "../pages/singleApp/SingleApp";
+import ProductNotFound from "../pages/error/ProductNotFound";
+
 
 const router = createBrowserRouter([
     {
@@ -28,6 +31,12 @@ const router = createBrowserRouter([
                 path: "/apps",
                 loader: fetchResponse,
                 Component: Apps
+            },
+            {
+                path: "/apps/:id",
+                loader: productDetails,
+                Component: SingleApp,
+                errorElement: <ProductNotFound/>
             },
             {
                 path: "/searchItems",

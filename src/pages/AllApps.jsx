@@ -1,5 +1,6 @@
 import React from 'react';
 import Product from '../components/products/product';
+import { Link } from 'react-router';
 
 const AllApps = ({data}) => {
     return (
@@ -7,7 +8,7 @@ const AllApps = ({data}) => {
 
             <div className='mt-10 m-auto grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4'>
                 {
-                    data.map(e => <Product key={e.id} e={e}></Product>)
+                    data.map(e => <Link key={e.id} to={`/apps/${e.id}`}><Product  e={e}></Product></Link>)
                 }
             </div>
         </div>

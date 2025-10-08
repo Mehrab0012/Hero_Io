@@ -1,7 +1,7 @@
 import React from 'react';
 import Product from '../../components/products/product';
 
-const SearchItems = ({data, searchItem, setSearchItem}) => {
+const SearchItems = ({data, searchItem}) => {
     const searchItems = data.filter(item => item.title.toLowerCase().includes(searchItem.toLowerCase()))
     return (
         <div>

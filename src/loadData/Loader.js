@@ -5,4 +5,11 @@ const fetchResponse = async () => {
   return data;
 };
 
-export default fetchResponse;
+const productDetails = async ({ params }) => {
+  const data = await fetchResponse();
+  const singleProductData = data.find(item => item.id === Number(params.id));
+  return singleProductData;
+}
+
+
+export { fetchResponse, productDetails };

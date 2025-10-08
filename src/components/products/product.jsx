@@ -4,9 +4,11 @@ const product = ({ e }) => {
 
     const { image, title, downloads, ratingAvg } = e;
 
-
+    const handleProductDetails = ()=>{
+        
+    }
     return (
-        <div className='p-4  rounded-sm  mt-2 mb-2  '>
+        <div onClick={handleProductDetails} className='p-4  rounded-sm  mt-2 mb-2  '>
             <div className=' cursor-pointer flex justify-center items-center'>
                 <img className='rounded-sm w-auto h-50' src={image} alt={title} />
             </div>
