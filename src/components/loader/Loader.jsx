@@ -1,11 +1,12 @@
 import React from 'react';
 
-const Apps = () => {
+const Loader = () => {
     return (
         <div>
+            <h1>Loading</h1>
             
         </div>
     );
 };
 
-export default Apps;
+export default Loader;

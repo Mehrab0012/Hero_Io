@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Apps = () => {
+const Loader = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const Apps = () => {
     );
 };
 
-export default Apps;
+export default Loader;

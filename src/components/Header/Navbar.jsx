@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../assets/logo.png'
+import { Link } from 'react-router';
 
 const Navbar = () => {
     return (
@@ -10,9 +11,9 @@ const Navbar = () => {
             </div>
             <div>
                 <ul className='flex gap-5'>
-                    <li className='text-[1rem] text-black font-medium hover:bg-gradient-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text hover:text-transparent'>Home</li>
-                    <li className='text-[1rem] text-black font-medium hover:bg-gradient-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text hover:text-transparent'>Apps</li>
-                    <li className='text-[1rem] text-black font-medium hover:bg-gradient-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text hover:text-transparent'>Installation</li>
+                    <Link to='/' className='text-[1rem] text-black font-medium hover:bg-gradient-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text hover:text-transparent cursor-pointer'>Home</Link>
+                    <Link to='/apps' className='text-[1rem] text-black font-medium hover:bg-gradient-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text hover:text-transparent cursor-pointer'>Apps</Link>
+                    <Link to='/installation' className='text-[1rem] text-black font-medium hover:bg-gradient-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text hover:text-transparent cursor-pointer'>Installation</Link>
 
 
                 </ul>
