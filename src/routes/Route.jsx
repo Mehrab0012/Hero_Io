@@ -5,6 +5,7 @@ import Loader from "../components/loader/Loader";
 import Error from "../pages/error/Error";
 import fetchResponse from "../loadData/Loader";
 import Apps from '../pages/Apps'
+import SearchItems from "../pages/searchItems/SearchItems";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
                 loader: fetchResponse,
                 Component: Apps
             },
+            {
+                path: "/searchItems",
+                Component: SearchItems
+            }
         ],
     },
 
