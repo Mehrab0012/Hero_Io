@@ -4,10 +4,11 @@ import Home from "../pages/Home";
 import Loader from "../components/loader/Loader";
 import Error from "../pages/error/Error";
 import Apps from '../pages/Apps'
-import {fetchResponse , productDetails} from '../loadData/Loader'
+import { fetchResponse, productDetails } from '../loadData/Loader'
 import SearchItems from "../pages/searchItems/SearchItems";
-import SingleApp from "../pages/singleApp/SingleApp";
 import ProductNotFound from "../pages/error/ProductNotFound";
+import AppDetails from "../pages/singleApp/AppDetails";
+import Installation from "../pages/Installation";
 
 
 const router = createBrowserRouter([
@@ -35,12 +36,17 @@ const router = createBrowserRouter([
             {
                 path: "/apps/:id",
                 loader: productDetails,
-                Component: SingleApp,
-                errorElement: <ProductNotFound/>
+                Component: AppDetails,
+                errorElement: <ProductNotFound />
             },
             {
                 path: "/searchItems",
                 Component: SearchItems
+            },
+            {
+                path: "/installation",
+                loader: fetchResponse,
+                Component: Installation
             }
         ],
     },

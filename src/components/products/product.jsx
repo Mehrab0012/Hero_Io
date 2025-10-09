@@ -1,5 +1,5 @@
 import React from 'react';
-import downloadIcon from '../../assets/downloadIcon.png'
+import downloadIcon from '../../assets/icon-downloads.png'
 const product = ({ e }) => {
 
     const { image, title, downloads, ratingAvg } = e;
