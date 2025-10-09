@@ -4,25 +4,6 @@ import AllApps from './AllApps';
 import SearchItems from './searchItems/SearchItems';
 import searchIcon from '../assets/searchIcon.png'
 
-
-
-//     "image": "https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg",
-//     "title": "Facebook",
-//     "companyName": "Meta Platforms, Inc.",
-//     "id": 7,
-//     "description": "Connect with friends, share, and stay in touch.",
-//     "size": 50,
-//     "reviews": "220k",
-//     "ratingAvg": 4.3,
-//     "downloads": "5B+",
-//     "ratings": [
-//       { "name": "1 star", "count": 200 },
-//       { "name": "2 star", "count": 400 },
-//       { "name": "3 star", "count": 1000 },
-//       { "name": "4 star", "count": 6000 },
-//       { "name": "5 star", "count": 20800 }
-//     ]
-//   },
 const Apps = () => {
     const data = useLoaderData();
     const [searchItem, setSearchItem] = useState('');

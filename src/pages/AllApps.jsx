@@ -8,7 +8,7 @@ const AllApps = ({data}) => {
 
             <div className='mt-10 m-auto grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4'>
                 {
-                    data.map(e => <Link key={e.id} to={`/apps/${e.id}`}><Product  e={e}></Product></Link>)
+                    data.map(e => <Link key={e.id} to={`/apps/${e.id}`}><Product key={e.id}  e={e}></Product></Link>)
                 }
             </div>
         </div>
