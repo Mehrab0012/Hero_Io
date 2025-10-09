@@ -7,16 +7,16 @@ import searchIcon from '../assets/searchIcon.png'
 const Apps = () => {
     const data = useLoaderData();
     const [searchItem, setSearchItem] = useState('');
+    const [appFound , setAppFound ]= useState(data.length);
 
-    console.log(searchItem.length)
     return (
         <div>
-                        <div className='flex flex-col justify-center text-center items-center mb-10'>
+            <div className='flex flex-col justify-center text-center items-center mb-10'>
                 <h1 className='text-5xl font-bold'>Our All Applications</h1>
                 <p className='mt-4 text-[1.25rem] font-regular text-[#627382]'>Explore All Apps on the Market developed by us. We code for Millions</p>
             </div>
-            <div className='w-full flex justify-between items-center 2xl:px-20 xl:px-10 md:px-5 max-sm:px-5'>
-                <h3 className='font-bold text-xl'>({data.length}) Apps Found</h3>
+            <div className='max-w-[1440px] m-auto flex justify-between items-center 2xl:px-20 xl:px-10 md:px-5 max-sm:px-5'>
+                <h3 className='font-bold text-xl'>({appFound}) Apps Found</h3>
                 <div className='flex justify-center'>
                     <input className='px-5 py-2 border rounded-md' type="text" placeholder='search Apps'
                         value={searchItem}
@@ -39,12 +39,14 @@ const Apps = () => {
                 searchItem.length === 0 ? <AllApps data={data}
                     searchItem={searchItem}
                     setSearchItem={setSearchItem}>
-                    </AllApps> :
+                </AllApps> :
                     <SearchItems
-                    data={data}
-                    searchItem={searchItem}
-                    setSearchItem={setSearchItem}
+                        setAppFound={setAppFound}
+                        data={data}
+                        searchItem={searchItem}
+                        setSearchItem={setSearchItem}
                     ></SearchItems>
+
             }
 
         </div>

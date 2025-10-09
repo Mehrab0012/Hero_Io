@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     {
         path: "/",
         Component: Layout,
-        hydrateFallbackElement: <Loader />,
+        loader: fetchResponse,
         errorElement: <Error />,
         children: [
             {
