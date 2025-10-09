@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 const ProductNotFound = () => {
     return (
         <div>
-            <div className='max-w-[1440px] m-auto flex flex-col p-40 justify-center items-center text-center'>
+            <div className='max-w-[1440px] m-auto flex flex-col max-sm:mt-10 xl:p-20 justify-center items-center text-center'>
                 <img className='h-90 w-90 m-auto' src={appErrorImg} alt="app not found" />
                 <h2 className='font-semibold text-5xl mt-5'>OPPS!! APP NOT FOUND</h2>
                 <p className='font-normal text-[#627382] mt-4 text-[1.2rem]'>The App you are requesting is not found on our system.  please try another apps</p>
